@@ -1,9 +1,11 @@
+import MovieCard from "./MovieCard"
+
 const MoviesContainer = ({results}) => {
   return (
-    <div>
+    <div className="grid gap-16 grid-cols-fluid">
         {
             results.map((movie)=>(
-                <div key={movie.id}>{movie.title}</div>
+                <MovieCard movie={movie}/>
             ))
         }
     </div>

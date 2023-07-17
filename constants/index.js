@@ -3,3 +3,14 @@ export const fetch_data = async(route) => {
     const {results} = await data.json()
     return results;
 }
+
+export function summarizeText(text, summaryLength) {
+    const words = text.split(" ");
+    let summary = words.slice(0, summaryLength).join(" ");
+  
+    if (words.length > summaryLength) {
+      summary += " ...";
+    }
+  
+    return summary;
+  }
